@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "ZcyHSjBNkKY8Z2WbRGWymsvi59Kd7P5j1/T0Ujgr3cc=",
+  "Hash": "akxRS5Yi67Djq1sH6mJ64W4DDVGYDF+VqzeZKXaf7qI=",
   "Source": "WebApiAutors",
   "BasePath": "_content/WebApiAutors",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApiAutors\\wwwroot",
+      "Source": "WebApiAutors",
+      "ContentRoot": "C:\\Users\\edmunoz\\Documents\\Proyectos VS\\Ejercicios NET\\WebApiAutors\\wwwroot\\",
+      "BasePath": "_content/WebApiAutors",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\edmunoz\\Documents\\Proyectos VS\\Ejercicios NET\\WebApiAutors\\wwwroot\\file 1.txt",
+      "SourceId": "WebApiAutors",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\edmunoz\\Documents\\Proyectos VS\\Ejercicios NET\\WebApiAutors\\wwwroot\\",
+      "BasePath": "_content/WebApiAutors",
+      "RelativePath": "file 1.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\file 1.txt"
+    }
+  ]
 }
