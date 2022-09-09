@@ -21,7 +21,7 @@ using WebApiAutors.Controllers;
 using WebApiAutors.Filters;
 using WebApiAutors.Middlewares;
 //using WebApiAutors.Helpers;
-using WebApiAutors.Services;
+
 
 namespace WebApiAutors
 {
@@ -46,20 +46,11 @@ namespace WebApiAutors
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
-            //custom service interface
-            services.AddTransient<IService, ServiceA>();
-            services.AddTransient<ServiceTransient>();
-            services.AddScoped<ServiceScoped>();
-            services.AddSingleton<ServiceSingleton>();
-            services.AddTransient<ActionFilter>();
-
-            services.AddHostedService<WriteInFile>();
-
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            services.AddResponseCaching();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,7 +67,7 @@ namespace WebApiAutors
 
             app.UseHttpsRedirection();
             app.UseRouting();
-            app.UseResponseCaching(); //cache filter
+
            // app.UseAuthentication();//OJO
             app.UseAuthorization();
 
